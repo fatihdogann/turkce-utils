@@ -8,3 +8,5 @@ export type { NormalizeTrOptions } from "./normalize.ts";
 export { numberToWordsTr, integerToWordsTr } from "./numbers.ts";
 export { ordinalTr, ordinalWordTr } from "./ordinal.ts";
 export { syllablesTr } from "./syllables.ts";
+export { atestmanScore, atestmanGrade } from "./readability.ts";
+export type { ReadabilityResult, AtestmanGrade } from "./readability.ts";
