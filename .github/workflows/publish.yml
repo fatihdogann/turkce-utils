@@ -81,7 +81,10 @@ jobs:
   publish:
     name: Publish
     needs: verify
-    if: startsWith(github.ref, 'refs/tags/v')
+    # A real publish requires a *pushed* v* tag. workflow_dispatch can be
+    # started against a tag ref too, so the event name has to be part of the
+    # condition — otherwise a manual run could publish.
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
