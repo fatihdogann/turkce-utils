@@ -226,12 +226,6 @@ npm run build     # tsc -> dist/
 Every module has a matching test in `test/`. The library has **zero runtime
 dependencies**.
 
-## License
-
-MIT © Mehmet Fatih Doğan
-
----
-
 ## Developer
 
 **Mehmet Fatih Doğan** — Software Developer.
