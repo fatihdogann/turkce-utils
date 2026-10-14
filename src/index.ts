@@ -3,3 +3,5 @@ export type { SlugifyOptions } from "./slug.ts";
 export { lowerTr, upperTr } from "./case.ts";
 export { compareTr, sortTr } from "./sort.ts";
 export { titleCaseTr } from "./title.ts";
+export { normalizeTr } from "./normalize.ts";
+export type { NormalizeTrOptions } from "./normalize.ts";
