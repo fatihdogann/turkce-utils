@@ -73,10 +73,13 @@ jobs:
             exit 1
           fi
 
-      # Manual runs stop here: a dry run cannot publish.
+      # Manual runs stop here. `npm pack --dry-run` builds and lists the exact
+      # tarball without contacting the registry, so it can never publish and it
+      # does not fail on an already-published version the way
+      # `npm publish --dry-run` does.
       - name: Dry run (cannot publish)
         if: github.event_name == 'workflow_dispatch'
-        run: npm publish --access public --dry-run
+        run: npm pack --dry-run
 
   publish:
     name: Publish
