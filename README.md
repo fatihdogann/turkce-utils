@@ -13,24 +13,15 @@ those rules into small, tested, dependency-free functions.
 
 ## Install
 
-`turkce-utils` is **not published to npm yet**. Install it straight from this
-repository:
-
 ```bash
-npm install github:fatihdogann/turkce-utils
+npm install turkce-utils
 ```
 
-Or clone it and build locally:
+Requires Node.js 20 or later. The published package is compiled ESM with type
+declarations and **zero runtime dependencies**.
 
-```bash
-git clone https://github.com/fatihdogann/turkce-utils.git
-cd turkce-utils
-npm install
-npm run build
-```
-
-Node.js 22.18+ can also run the TypeScript sources directly — for example
-`node src/cli.ts slug "Çılgın Şöför"` — with no build step.
+Working on the library itself? Node.js 22.18+ can run the TypeScript sources
+directly — see [Development](#development).
 
 ## Modules
 
