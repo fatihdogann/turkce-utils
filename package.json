@@ -1,6 +1,6 @@
 {
   "name": "turkce-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero-dependency TypeScript helpers for Turkish text: slugify, Turkish-aware case & sort, title case, number-to-words, syllables and Ateşman readability — plus a CLI.",
   "keywords": [
     "turkish",
@@ -37,7 +37,7 @@
     }
   },
   "bin": {
-    "turkce": "./dist/cli.js"
+    "turkce": "dist/cli.js"
   },
   "files": [
     "dist",
