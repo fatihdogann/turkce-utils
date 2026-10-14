@@ -13,3 +13,4 @@ export type { ReadabilityResult, AtestmanGrade } from "./readability.ts";
 export { truncateTr } from "./truncate.ts";
 export { initialsTr } from "./initials.ts";
 export type { InitialsTrOptions } from "./initials.ts";
+export { runCommand, HELP } from "./cli.ts";
