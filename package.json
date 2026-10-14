@@ -1,0 +1,54 @@
+{
+  "name": "turkce-utils",
+  "version": "0.1.0",
+  "description": "Zero-dependency TypeScript helpers for Turkish text: slugify, Turkish-aware case & sort, title case, number-to-words, syllables and Ateşman readability — plus a CLI.",
+  "keywords": [
+    "turkish",
+    "türkçe",
+    "slugify",
+    "text",
+    "i18n",
+    "readability",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "Mehmet Fatih Doğan",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "turkce": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatihdogann/turkce-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fatihdogann/turkce-utils/issues"
+  },
+  "homepage": "https://github.com/fatihdogann/turkce-utils#readme"
+}
