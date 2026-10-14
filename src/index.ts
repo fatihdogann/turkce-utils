@@ -5,3 +5,4 @@ export { compareTr, sortTr } from "./sort.ts";
 export { titleCaseTr } from "./title.ts";
 export { normalizeTr } from "./normalize.ts";
 export type { NormalizeTrOptions } from "./normalize.ts";
+export { numberToWordsTr, integerToWordsTr } from "./numbers.ts";
