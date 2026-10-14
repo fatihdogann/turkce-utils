@@ -37,6 +37,7 @@
     "test": "node --test",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {

@@ -13,9 +13,24 @@ those rules into small, tested, dependency-free functions.
 
 ## Install
 
+`turkce-utils` is **not published to npm yet**. Install it straight from this
+repository:
+
 ```bash
-npm install turkce-utils
+npm install github:fatihdogann/turkce-utils
 ```
+
+Or clone it and build locally:
+
+```bash
+git clone https://github.com/fatihdogann/turkce-utils.git
+cd turkce-utils
+npm install
+npm run build
+```
+
+Node.js 22.18+ can also run the TypeScript sources directly — for example
+`node src/cli.ts slug "Çılgın Şöför"` — with no build step.
 
 ## Modules
 
@@ -150,7 +165,7 @@ score = 198.43 − 40.175 × (syllables / words) − 2.610 × (words / sentences
 import { atestmanScore } from "turkce-utils";
 
 atestmanScore("Merhaba dünya. Nasılsın?");
-// { score: 87.38, grade: "kolay", syllables: 7, words: 3, sentences: 2 }
+// { score: 87.38, grade: "kolay", syllables: 8, words: 3, sentences: 2 }
 ```
 
 Grades: `çok kolay` (90+), `kolay` (70+), `orta` (50+), `zor` (30+), `çok zor`.
@@ -214,3 +229,14 @@ dependencies**.
 ## License
 
 MIT © Mehmet Fatih Doğan
+
+---
+
+## Developer
+
+**Mehmet Fatih Doğan** — Software Developer.
+
+- 🌐 Portfolio & Contact: [mehmetfatihdogan.com.tr](https://mehmetfatihdogan.com.tr)
+- 💻 GitHub: [@fatihdogann](https://github.com/fatihdogann)
+
+For questions, bug reports, or feedback about this project, feel free to contact me through [my website](https://mehmetfatihdogan.com.tr).
