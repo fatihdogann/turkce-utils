@@ -11,6 +11,14 @@ uppercases to `İ`, the alphabet puts `ç`, `ğ`, `ı`, `ö`, `ş`, `ü` in thei
 places, and reading difficulty needs its own formula. `turkce-utils` packages
 those rules into small, tested, dependency-free functions.
 
+```ts
+import { slugify, upperTr, sortTr } from "turkce-utils";
+
+slugify("Çılgın Şöför İĞÜ");   // "cilgin-sofor-igu"
+upperTr("istanbul ışık");      // "İSTANBUL IŞIK"
+sortTr(["üzüm", "armut", "çilek"]); // ["armut", "çilek", "üzüm"]
+```
+
 ## Install
 
 ```bash
