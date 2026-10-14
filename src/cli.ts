@@ -16,7 +16,8 @@ import { syllablesTr } from "./syllables.ts";
 import { atestmanScore } from "./readability.ts";
 import { truncateTr } from "./truncate.ts";
 import { initialsTr } from "./initials.ts";
-import { pathToFileURL } from "node:url";
+import { realpathSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
 export const HELP = `turkce — Turkish text helpers
 
@@ -98,7 +99,23 @@ async function main(argv: string[]): Promise<number> {
   }
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+/**
+ * True when this file is the process entry point.
+ *
+ * `process.argv[1]` can be a symlink — npm links `node_modules/.bin/turkce`
+ * to `dist/cli.js` — so both sides are resolved to their real path first.
+ */
+function isEntryPoint(): boolean {
+  const invoked = process.argv[1];
+  if (!invoked) return false;
+  try {
+    return realpathSync(invoked) === realpathSync(fileURLToPath(import.meta.url));
+  } catch {
+    return false;
+  }
+}
+
+if (isEntryPoint()) {
   main(process.argv.slice(2)).then((code) => {
     process.exitCode = code;
   });
