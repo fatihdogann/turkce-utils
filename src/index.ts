@@ -11,3 +11,5 @@ export { syllablesTr } from "./syllables.ts";
 export { atestmanScore, atestmanGrade } from "./readability.ts";
 export type { ReadabilityResult, AtestmanGrade } from "./readability.ts";
 export { truncateTr } from "./truncate.ts";
+export { initialsTr } from "./initials.ts";
+export type { InitialsTrOptions } from "./initials.ts";
