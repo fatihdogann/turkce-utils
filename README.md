@@ -1,6 +1,7 @@
 # turkce-utils
 
 [![CI](https://github.com/fatihdogann/turkce-utils/actions/workflows/ci.yml/badge.svg)](https://github.com/fatihdogann/turkce-utils/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/turkce-utils.svg)](https://www.npmjs.com/package/turkce-utils)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Runtime dependencies: 0](https://img.shields.io/badge/runtime_dependencies-0-brightgreen.svg)](#development)
 
