@@ -226,6 +226,21 @@ npm run build     # tsc -> dist/
 Every module has a matching test in `test/`. The library has **zero runtime
 dependencies**.
 
+### Releasing
+
+Versions are published from GitHub Actions using npm **trusted publishing**
+(OIDC), so no long-lived npm token is stored anywhere. Bump the version and push
+a matching tag:
+
+```bash
+npm version patch   # or minor / major
+git push --follow-tags
+```
+
+[`.github/workflows/publish.yml`](.github/workflows/publish.yml) checks that the
+tag matches `package.json`, runs the typecheck and the tests, and publishes with
+a provenance attestation. It can also be started manually as a dry run.
+
 ## Developer
 
 **Mehmet Fatih Doğan** — Software Developer.
