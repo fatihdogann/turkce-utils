@@ -17,6 +17,11 @@ test("reports counts and a grade", () => {
   assert.ok(result.grade.length > 0);
 });
 
+test("uses the published Ateşman (1997) coefficients", () => {
+  // 8 syllables, 3 words, 2 sentences: 198.825 − 40.175 × 8/3 − 2.610 × 3/2 = 87.7767
+  assert.equal(atestmanScore("Merhaba dünya. Nasılsın?").score, 87.78);
+});
+
 test("clamps the score into 0–100", () => {
   const result = atestmanScore("a");
   assert.ok(result.score >= 0 && result.score <= 100);

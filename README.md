@@ -158,14 +158,14 @@ syllablesTr("yapıyoruz"); // 4
 Ateşman readability score for Turkish (Ateşman, 1997):
 
 ```text
-score = 198.43 − 40.175 × (syllables / words) − 2.610 × (words / sentences)
+score = 198.825 − 40.175 × (syllables / words) − 2.610 × (words / sentences)
 ```
 
 ```ts
 import { atestmanScore } from "turkce-utils";
 
 atestmanScore("Merhaba dünya. Nasılsın?");
-// { score: 87.38, grade: "kolay", syllables: 8, words: 3, sentences: 2 }
+// { score: 87.78, grade: "kolay", syllables: 8, words: 3, sentences: 2 }
 ```
 
 Grades: `çok kolay` (90+), `kolay` (70+), `orta` (50+), `zor` (30+), `çok zor`.

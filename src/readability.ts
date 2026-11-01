@@ -2,7 +2,7 @@
  * Ateşman readability score for Turkish text (Ateşman, 1997).
  *
  * ```text
- * score = 198.43 − 40.175 × (syllables / words) − 2.610 × (words / sentences)
+ * score = 198.825 − 40.175 × (syllables / words) − 2.610 × (words / sentences)
  * ```
  *
  * Higher scores mean easier text. The score is clamped to the 0–100 range.
@@ -51,7 +51,7 @@ export function atestmanScore(text: string): ReadabilityResult {
   const score =
     wordCount === 0
       ? 0
-      : 198.43 - 40.175 * (syllableCount / wordCount) - 2.61 * (wordCount / sentences);
+      : 198.825 - 40.175 * (syllableCount / wordCount) - 2.61 * (wordCount / sentences);
   const clamped = Math.max(0, Math.min(100, Math.round(score * 100) / 100));
 
   return {
