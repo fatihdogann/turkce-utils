@@ -15,7 +15,7 @@ those rules into small, tested, dependency-free functions.
 ```ts
 import { slugify, upperTr, sortTr } from "turkce-utils";
 
-slugify("Çılgın Şöför İĞÜ");   // "cilgin-sofor-igu"
+slugify("Çılgın Şoför İĞÜ");   // "cilgin-sofor-igu"
 upperTr("istanbul ışık");      // "İSTANBUL IŞIK"
 sortTr(["üzüm", "armut", "çilek"]); // ["armut", "çilek", "üzüm"]
 ```
@@ -59,7 +59,7 @@ Remaining diacritics are folded, punctuation is dropped.
 ```ts
 import { slugify } from "turkce-utils";
 
-slugify("Çılgın Şöför İĞÜ");                    // "cilgin-sofor-igu"
+slugify("Çılgın Şoför İĞÜ");                    // "cilgin-sofor-igu"
 slugify("Türkçe Metin", { separator: "_" });    // "turkce_metin"
 slugify("kahve falı bakıyoruz", { maxLength: 10 }); // "kahve"
 ```
